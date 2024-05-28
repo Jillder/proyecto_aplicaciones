@@ -18,6 +18,7 @@ class Autenticacion {
             $_SESSION['usuario'] = $correo;
             $_SESSION['nombre_completo'] = $row['nombre_completo'];
             $_SESSION['user'] = $row['usuario'];
+            $_SESSION['id_user'] = $row['id_user'];
 
             header("location: ../rutas/menu.php");
         } else {
