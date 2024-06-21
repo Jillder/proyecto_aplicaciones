@@ -21,6 +21,24 @@
                 <p>Mamma rosa</p>
             </a>
         </div>
+        <div class="restaurant">
+            <a href="reserva.php?id=3">
+                <img src="../img/dubai.jpg" alt="dubai">
+                <p>Dubai</p>
+            </a>
+        </div>
+        <div class="restaurant">
+            <a href="reserva.php?id=4">
+                <img src="../img/finisterre.jpg" alt="finisterre">
+                <p>Finisterre</p>
+            </a>
+        </div>
+        <div class="restaurant">
+            <a href="reserva.php?id=5">
+                <img src="../img/martinica.jpg" alt="martinica">
+                <p>Martinica</p>
+            </a>
+        </div>
         <!-- Añadir más restaurantes según sea necesario -->
     </div>
 </body>
