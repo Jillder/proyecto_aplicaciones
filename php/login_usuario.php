@@ -20,9 +20,9 @@ class Autenticacion {
             $_SESSION['user'] = $row['usuario'];
             $_SESSION['id_user'] = $row['id_user'];
 
-            header("location: ../rutas/menu.php");
-        } else {
             header("location: ../index.html");
+        } else {
+            header("location: ../rutas/login.html");
         }
     }
 }

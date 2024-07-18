@@ -7,7 +7,7 @@ if (isset($_SESSION['usuario'])) {
     $user = $_SESSION['user'];
     $id_user = $_SESSION['id_user'];
 } else {
-    header("location: ../index.html");
+    header("location: ../rutas/login.html");
     exit();
 }
 

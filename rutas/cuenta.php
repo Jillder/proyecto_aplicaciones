@@ -21,7 +21,7 @@ if (isset($_SESSION['usuario'])) {
 </head>
 <body style="background-color: black;"></body>
 <body>
-    <h1>Usuarios</h1>
+    <!-- <h1>Usuarios</h1>
     <table id="usuarios-table">
         <thead>
             <tr>
@@ -30,8 +30,9 @@ if (isset($_SESSION['usuario'])) {
             </tr>
         </thead>
         <tbody></tbody>
-    </table>
+    </table> -->
 
+    <button id="user-button"><?php echo $user; ?></button>
     <h1>Reservas</h1>
     <table id="reservas-table">
         <thead>
@@ -40,6 +41,7 @@ if (isset($_SESSION['usuario'])) {
                 <th>Hora</th>
                 <th>Tamaño de Mesa</th>
                 <th>Nombre del Restaurante</th>
+                <th>Acción</th>
             </tr>
         </thead>
         <tbody></tbody>

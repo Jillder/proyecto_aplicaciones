@@ -7,7 +7,7 @@ if (isset($_SESSION['usuario'])) {
     $user = $_SESSION['user'];
     $id_user = $_SESSION['id_user'];
 } else {
-    header("location: ../index.html");
+    header("location: ../rutas/login.html");
 }
 
 ?>
@@ -22,6 +22,7 @@ if (isset($_SESSION['usuario'])) {
     <link rel="stylesheet" href="../css/reserva.css">
 </head>
 <body>
+    <a href="../rutas/cuenta.php" id="user-button"><?php echo $user; ?></a>
     <h1>Reserva en <span id="restaurant-name">Restaurante</span></h1>
     <form action="../php/ingresar_reserva.php" method="POST">
         <label for="fecha">Fecha:</label>

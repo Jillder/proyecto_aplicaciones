@@ -55,10 +55,10 @@ class RegistroUsuario {
         $ejecutar = $this->conexion->query($query);
 
         if ($ejecutar) {
-            $this->mostrarAlerta("Usuario almacenado exitosamente", "../rutas/menu.php");
+            $this->mostrarAlerta("Usuario almacenado exitosamente", "../index.html");
             return true;
         } else {
-            $this->mostrarAlerta("Ocurrió un error al registrarse.", "../index.php");
+            $this->mostrarAlerta("Ocurrió un error al registrarse.", "../rutas/login.html");
             return false;
         }
     }
