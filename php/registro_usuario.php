@@ -40,12 +40,12 @@ class RegistroUsuario {
         $verificadorUsuario = new VerificadorUsuario($this->conexion);
 
         if ($verificadorCorreo->verificar($correo)) {
-            $this->mostrarAlerta("Este correo ya está registrado, intenta con otro diferente", "../index.html");
+            $this->mostrarAlerta("Este correo ya está registrado, intenta con otro diferente", "../rutas/login.html");
             return false;
         }
 
         if ($verificadorUsuario->verificar($usuario)) {
-            $this->mostrarAlerta("Este usuario ya está registrado, intenta con otro diferente", "../index.html");
+            $this->mostrarAlerta("Este usuario ya está registrado, intenta con otro diferente", "../rutas/login.html");
             return false;
         }
 
@@ -55,7 +55,7 @@ class RegistroUsuario {
         $ejecutar = $this->conexion->query($query);
 
         if ($ejecutar) {
-            $this->mostrarAlerta("Usuario almacenado exitosamente", "../index.html");
+            $this->mostrarAlerta("Usuario almacenado exitosamente", "../rutas/login.html");
             return true;
         } else {
             $this->mostrarAlerta("Ocurrió un error al registrarse.", "../rutas/login.html");

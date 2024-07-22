@@ -52,6 +52,17 @@ table, th, td {
     align-self: center;
 }
 
+#btn_add_restaurant {
+    font-size: 75%;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    border-radius: 2px;
+    margin-top: 20px;
+    align-self: center;
+}
+
 #btn_logout:hover {
     background-color: rgba(174, 162, 162, 0.757);
     color: white;
@@ -68,4 +79,17 @@ table, th, td {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.delete-button {
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: darkred;
 }

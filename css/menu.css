@@ -11,9 +11,26 @@ body {
 }
 
 h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     margin: 20px 0;
     color: #fff;
     background-color: black;
+    position: relative;
+}
+
+h1 .user-buttons {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+h1 .user-buttons a {
+    display: inline-block;
+    margin-right: 10px;
 }
 
 .restaurants {
@@ -39,11 +56,23 @@ h1 {
 }
 
 .restaurant p {
-    margin: 10px 0;
+    margin: 10px 0w;
     font-weight: bold;
 }
 
 .restaurant a {
     text-decoration: none;
     color: inherit;
+}
+
+.user-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
 }

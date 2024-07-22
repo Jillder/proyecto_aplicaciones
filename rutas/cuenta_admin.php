@@ -1,11 +1,7 @@
 <?php
 session_start();
 
-if (isset($_SESSION['usuario'])) {
-    $nombre_completo = $_SESSION['nombre_completo'];
-    $correo = $_SESSION['usuario'];
-    $user = $_SESSION['user'];
-} else {
+if (!isset($_SESSION['usuario'])) {
     header("location: login.html");
 }
 
@@ -21,15 +17,12 @@ if (isset($_SESSION['usuario'])) {
 </head>
 <body style="background-color: black;"></body>
 <body>
-    <button id="user-button"><?php echo $user; ?></button>
-    <h1>Reservas</h1>
-    <table id="reservas-table">
+    <h1>Usuarios</h1>
+    <table id="usuarios-table">
         <thead>
             <tr>
-                <th>Fecha</th>
-                <th>Hora</th>
-                <th>Tamaño de Mesa</th>
-                <th>Nombre del Restaurante</th>
+                <th>Nombre de Usuario</th>
+                <th>Correo</th>
                 <th>Acción</th>
             </tr>
         </thead>
@@ -37,7 +30,9 @@ if (isset($_SESSION['usuario'])) {
     </table>
     
     <button id="btn_logout" onclick="window.location.href = '../php/logout.php';">Cerrar Sesion</button>
+    <button id="btn_add_restaurant" onclick="window.location.href = '   add_restaurant.php';">Agregar Restaurante</button>
 
-    <script src="../js/cuenta.js"></script>
+
+    <script src="../js/cuenta_admin.js"></script>
 </body>
 </html>

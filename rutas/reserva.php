@@ -10,8 +10,8 @@ if (isset($_SESSION['usuario'])) {
     header("location: ../rutas/login.html");
 }
 
+$restaurant_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 ?>
-
 
 <!DOCTYPE html>
 <html lang="es">
@@ -22,7 +22,7 @@ if (isset($_SESSION['usuario'])) {
     <link rel="stylesheet" href="../css/reserva.css">
 </head>
 <body>
-    <a href="../rutas/cuenta.php" id="user-button"><?php echo $user; ?></a>
+    <a href="../rutas/cuenta.php" id="user-button"><?php echo htmlspecialchars($user); ?></a>
     <h1>Reserva en <span id="restaurant-name">Restaurante</span></h1>
     <form action="../php/ingresar_reserva.php" method="POST">
         <label for="fecha">Fecha:</label>
@@ -31,7 +31,7 @@ if (isset($_SESSION['usuario'])) {
         <input type="time" id="hora" name="hora" required>
         <label for="personas">Número de personas:</label>
         <input type="number" id="personas" name="personas" required>
-        <input type="hidden" id="restaurant-id" name="restaurant-id">
+        <input type="hidden" id="restaurant-id" name="restaurant-id" value="<?php echo htmlspecialchars($restaurant_id); ?>">
         <button type="submit">Reservar</button>
     </form>
     <script src="../js/reserva.js"></script>
